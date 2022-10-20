@@ -1,15 +1,15 @@
 import { configureStore } from '@reduxjs/toolkit'
-import commentsReducer from './comments/commentsSlice'
-import commentsApi from './comments/commentsApi'
+import commentsReducer from './countries/countriesSlice'
+import countriesApi from './countries/countriesApi'
 
 export const store = configureStore({
 
 
     reducer: {
-        [commentsApi.reducerPath]: commentsApi.reducer,
+        [countriesApi.reducerPath]: countriesApi.reducer,
         comments: commentsReducer
     },
     middleware: (getDefaultMiddleware) =>
         getDefaultMiddleware()
-            .concat(commentsApi.middleware)
+            .concat(countriesApi.middleware)
 })

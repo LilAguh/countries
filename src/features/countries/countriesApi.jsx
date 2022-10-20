@@ -1,5 +1,5 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
-import { responseCountriesDTO } from './responseCountriesDTO'
+import { countriesResponse } from './countriesResponse'
 import api from "../../api"
 
 
@@ -17,7 +17,7 @@ const commentsApi = createApi({
                 method: "GET",
             }),
             transformResponse: (response) => {
-                return response.map((country) => responseCountriesDTO(country))
+                return response.map((country) => countriesResponse(country))
             },
         }),
     })

@@ -1,6 +1,5 @@
-import './App.css';
 import { useSelector } from 'react-redux'
-import { useGetAllCountriesQuery } from "./features/comments/commentsApi"
+import { useGetAllCountriesQuery } from "./features/countries/countriesApi"
 function App() {
 
   const { data, isLoading, error } = useGetAllCountriesQuery();
