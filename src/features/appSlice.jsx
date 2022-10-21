@@ -1,16 +1,19 @@
-import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-import commentsApi from "./countriesApi";
+import { createSlice } from "@reduxjs/toolkit";
 
 
-const initialState = [
-]
+const initialState = {
+    darkMode: false,
+    select: "",
+    countries: [],
+    filteredCountries: [],
+}
 
 
-export const commentsSlice = createSlice({
-    name: 'comments',
+export const appSlice = createSlice({
+    name: 'app',
     initialState,
     reducers: {
-        addComment: (state, action) => {
+        setDarkMode: (state, action) => {
             state.push(action.payload)
         },
         addResponse: (state, action) => {
@@ -31,5 +34,5 @@ export const commentsSlice = createSlice({
     }
 })
 
-export const { addComment, deleteComment, addResponse } = commentsSlice.actions
-export default commentsSlice.reducer
+export const { setDarkMode, deleteComment, addResponse } = appSlice.actions
+export default appSlice.reducer
