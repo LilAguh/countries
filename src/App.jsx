@@ -1,5 +1,7 @@
 import { useSelector } from 'react-redux'
 import { useGetAllCountriesQuery } from "./features/countries/countriesApi"
+import SwitchMode from './components/switchMode/SwitchMode';
+
 function App() {
 
   const { data, isLoading, error } = useGetAllCountriesQuery();
@@ -9,6 +11,7 @@ function App() {
   return (
     <div>
       <h1>hello world</h1>
+      <SwitchMode />
     </div>
   );
 }
