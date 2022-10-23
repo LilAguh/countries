@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./SwitchMode.css"
+import "./SwitchMode.scss"
 // import { useDispatch, useSelector } from "react-redux"
 
 export default function SwitchMode() {
@@ -11,12 +11,7 @@ export default function SwitchMode() {
 
     return (
         <div>
-            <input
-                type="checkbox"
-                id="switch"
-                checked={isChecked}
-                onChange={handleOnChange}
-            />
+            <input type="checkbox" id="switch" checked={isChecked} onChange={handleOnChange} />
             <label for="switch"></label>
         </div>
     );
